@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="477.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookingsystem.client.views.login.LoginViewController">
+   <children>
+      <BorderPane layoutY="7.0" prefHeight="109.0" prefWidth="424.0">
+         <bottom>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="375.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="52.0" text="UserId" />
+                  <TextField fx:id="userId" prefHeight="25.0" prefWidth="251.0" />
+                  <Button fx:id="loginButton" mnemonicParsing="false" onAction="#onLoginButton" text="Login" />
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <Label prefHeight="35.0" prefWidth="277.0" text="Login" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+         </center>
+      </BorderPane>
+      <HBox layoutX="34.0" layoutY="419.0" prefHeight="44.0" prefWidth="357.0" />
+      <HBox layoutX="25.0" layoutY="109.0" prefHeight="100.0" prefWidth="368.0">
+         <children>
+            <GridPane prefHeight="135.0" prefWidth="339.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="65.33333333333334" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="266.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Password" />
+                  <TextField fx:id="requestField" GridPane.columnIndex="1" />
+                  <Label fx:id="errorLabel" prefHeight="17.0" prefWidth="319.0" text="Error label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="SubmitButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onSubmitButton" prefHeight="38.0" prefWidth="54.0" text="Submit" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <ButtonBar layoutX="72.0" layoutY="239.0" prefHeight="40.0" prefWidth="311.0">
+        <buttons>
+          <Button fx:id="LoginDatabaseButton" mnemonicParsing="false" onAction="#onLoginToDBButton" text="Login to Database" />
+            <Button fx:id="LoginListButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onLoginListButton" text="Connected Users" />
+        </buttons>
+      </ButtonBar>
+      <TextField fx:id="connectedText" layoutX="147.0" layoutY="209.0" text="Not Connected to DB" />
+   </children>
+</AnchorPane>
